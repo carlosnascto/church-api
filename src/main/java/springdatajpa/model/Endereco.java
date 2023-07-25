@@ -1,13 +1,10 @@
 package springdatajpa.model;
 import javax.persistence.*;
+import javax.persistence.Embeddable;
 
-@Entity
-@Table(name = "tab_enderecos")
 
+@Embeddable
 public class Endereco {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     private String logradouro;
     private String bairro;

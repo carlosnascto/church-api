@@ -1,6 +1,7 @@
 package springdatajpa.model;
 import javax.persistence.*;
 import java.util.Date;
+import springdatajpa.model.Endereco;
 
 @Entity
 @Table(name = "tab_sedes")
@@ -25,6 +26,27 @@ public class Sede {
     private Date dataInicio;
     private String email;
     private Long telefone;
+    @Embedded
+    private Endereco endereco;
+    @Column(name="id_congregacao")
+    private Integer congregcao;
+
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Integer getCongregcao() {
+        return congregcao;
+    }
+
+    public void setCongregcao(Integer congregcao) {
+        this.congregcao = congregcao;
+    }
 
     public Integer getId() {
         return id;

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import springdatajpa.model.*;
 import springdatajpa.repository.CongregacaoRepository;
-import springdatajpa.repository.EnderecoRepository;
 import springdatajpa.repository.SedeRepository;
 import springdatajpa.repository.MembroRepository;
 
@@ -21,15 +20,12 @@ public class StartBasic implements CommandLineRunner {
     @Autowired
     private MembroRepository membroCrud;
 
-    @Autowired
-    private EnderecoRepository enderecoCrud;
 
     @Override // indica que este método sobrescreve um método da superclasse
     public void run(String... args) throws Exception {
        //incluirCongregacao();
        //incluirSede(); //erro
         //incluirMembro();
-        incluirEndereco();
     }
 
     private Congregacao incluirCongregacao(){
@@ -73,21 +69,5 @@ public class StartBasic implements CommandLineRunner {
         return membro;
     }
 
-    private Endereco incluirEndereco(){
-        Endereco endereco  = enderecoCrud.findById(2).orElse(null);
-        if(endereco==null) {
-            endereco = new Endereco();
-            endereco.setLogradouro("Rua Osvaldo Cruz");
-            endereco.setNumero(1780);
-            endereco.setBairro("Canaã");
-            endereco.setComplemento("Em frente o poço da caema");
-            endereco.setCidade("Santa Inês");
-            endereco.setEstado("MA");
-            endereco.setCep(65300695);
-            enderecoCrud.save(endereco);
-            System.out.println("endereco adicionado com sucesso");
-        }
-        return endereco;
-    }
 
 }
