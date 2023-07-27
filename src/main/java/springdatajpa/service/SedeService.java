@@ -3,22 +3,19 @@ package springdatajpa.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import springdatajpa.dto.CongregacaoRequest;
 import springdatajpa.dto.ProgramacaoRequest;
-import springdatajpa.model.Congregacao;
+import springdatajpa.dto.SedeRequest;
 import springdatajpa.model.Programacao;
-import springdatajpa.repository.CongregacaoRepository;
+import springdatajpa.model.Sede;
 import springdatajpa.repository.ProgramacaoRepository;
-
-//não esquecer estas anotações
-//nas novas classes deste pacote
+import springdatajpa.repository.SedeRepository;
 @Service
-public class CongregacaoService {
+public class SedeService {
     @Autowired
-    private CongregacaoRepository repository;
+    private SedeRepository repository;
 
-    public void incluir(CongregacaoRequest request) {
-        Congregacao entity = new Congregacao();
+    public void incluir(SedeRequest request){
+        Sede entity = new Sede();
         BeanUtils.copyProperties(request, entity);
         repository.save(entity);
     }

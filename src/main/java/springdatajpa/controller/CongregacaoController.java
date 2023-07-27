@@ -2,8 +2,10 @@ package springdatajpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springdatajpa.dto.CongregacaoRequest;
 import springdatajpa.model.Congregacao;
 import springdatajpa.repository.CongregacaoRepository;
+import springdatajpa.service.CongregacaoService;
 
 import java.util.List;
 
@@ -12,23 +14,10 @@ import java.util.List;
 
 public class CongregacaoController {
     @Autowired
-    private CongregacaoRepository repository;
+    private CongregacaoService service;
     @PostMapping
-    public void salvar(@RequestBody Congregacao congregacao){
-        repository.save(congregacao);
+    public void salvar(@RequestBody CongregacaoRequest request){
+        service.incluir(request);
     }
 
-    @PutMapping
-    public void alterar(@RequestBody Congregacao congregacao){
-        repository.save(congregacao);
-    }
-
-    @GetMapping(path = "/{id}")
-    public Congregacao buscar(@PathVariable("id") Integer id){
-        return repository.findById(id).get();
-    }
-    @GetMapping
-    public List<Congregacao> listar(){
-        return repository.findAll();
-    }
 }

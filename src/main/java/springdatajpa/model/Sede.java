@@ -29,7 +29,7 @@ public class Sede {
     @Embedded
     private Endereco endereco;
     @Column(name="id_congregacao")
-    private Integer congregcao;
+    private Integer congregacao;
 
 
     public Endereco getEndereco() {
@@ -41,11 +41,11 @@ public class Sede {
     }
 
     public Integer getCongregcao() {
-        return congregcao;
+        return congregacao;
     }
 
     public void setCongregcao(Integer congregcao) {
-        this.congregcao = congregcao;
+        this.congregacao = congregcao;
     }
 
     public Integer getId() {

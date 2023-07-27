@@ -1,8 +1,12 @@
 package springdatajpa.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springdatajpa.dto.ProgramacaoRequest;
+import springdatajpa.dto.SedeRequest;
 import springdatajpa.model.Sede;
 import springdatajpa.repository.SedeRepository;
+import springdatajpa.service.ProgramacaoService;
+import springdatajpa.service.SedeService;
 
 import java.util.List;
 
@@ -11,23 +15,10 @@ import java.util.List;
 
 public class SedeController {
     @Autowired
-    private SedeRepository repository;
+    private SedeService service;
     @PostMapping
-    public void salvar(@RequestBody Sede sede){
-        repository.save(sede);
+    public void salvar(@RequestBody SedeRequest request){
+        service.incluir(request);
     }
 
-    @PutMapping
-    public void alterar(@RequestBody Sede sede){
-        repository.save(sede);
-    }
-
-    @GetMapping(path = "/{id}")
-    public Sede buscar(@PathVariable("id") Integer id){
-        return repository.findById(id).get();
-    }
-    @GetMapping
-    public List<Sede> listar(){
-        return repository.findAll();
-    }
 }
