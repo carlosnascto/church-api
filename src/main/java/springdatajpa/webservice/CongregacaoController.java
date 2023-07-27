@@ -1,13 +1,9 @@
-package springdatajpa.controller;
+package springdatajpa.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.dto.CongregacaoRequest;
-import springdatajpa.model.Congregacao;
-import springdatajpa.repository.CongregacaoRepository;
+import springdatajpa.model.dto.CongregacaoRequest;
 import springdatajpa.service.CongregacaoService;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/congregacoes")

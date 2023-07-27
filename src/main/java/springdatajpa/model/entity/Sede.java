@@ -1,7 +1,6 @@
-package springdatajpa.model;
+package springdatajpa.model.entity;
 import javax.persistence.*;
 import java.util.Date;
-import springdatajpa.model.Endereco;
 
 @Entity
 @Table(name = "tab_sedes")

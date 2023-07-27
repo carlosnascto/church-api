@@ -1,4 +1,4 @@
-package springdatajpa.model;
+package springdatajpa.model.enums;
 
 public enum Sexo {
     FEMININO, MASCULINO

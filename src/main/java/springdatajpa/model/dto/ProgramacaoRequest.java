@@ -1,10 +1,9 @@
-package springdatajpa.dto;
+package springdatajpa.model.dto;
 
 import lombok.Data;
-import springdatajpa.model.Endereco;
-import springdatajpa.model.ProgramacaoTipo;
+import springdatajpa.model.entity.Endereco;
+import springdatajpa.model.enums.ProgramacaoTipo;
 
-import javax.persistence.*;
 import java.util.Date;
 
 @Data

@@ -1,10 +1,8 @@
-package springdatajpa.dto;
+package springdatajpa.model.dto;
 
 import lombok.Data;
-import springdatajpa.model.Endereco;
+import springdatajpa.model.entity.Endereco;
 
-import javax.persistence.Column;
-import javax.persistence.Embedded;
 import java.util.Date;
 @Data
 public class SedeRequest {

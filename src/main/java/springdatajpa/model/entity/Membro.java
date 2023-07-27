@@ -1,6 +1,8 @@
-package springdatajpa.model;
+package springdatajpa.model.entity;
+import springdatajpa.model.enums.MembroTipo;
+import springdatajpa.model.enums.Sexo;
+
 import javax.persistence.*;
-import springdatajpa.model.Endereco;
 
 @Entity // indica que esta classe é uma entidade que será mapeada como uma tabela de um banco.
 @Table(name = "tab_membros") // indica a tabela que os dados serão persistidas.

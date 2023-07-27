@@ -1,11 +1,10 @@
-package springdatajpa.dto;
+package springdatajpa.model.dto;
 
 import lombok.Data;
-import springdatajpa.model.Endereco;
-import springdatajpa.model.MembroTipo;
-import springdatajpa.model.Sexo;
+import springdatajpa.model.entity.Endereco;
+import springdatajpa.model.enums.MembroTipo;
+import springdatajpa.model.enums.Sexo;
 
-import javax.persistence.*;
 @Data
 public class MembroRequest {
     private String nome;

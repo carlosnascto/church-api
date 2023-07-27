@@ -1,10 +1,8 @@
-package springdatajpa.controller;
+package springdatajpa.webservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.dto.MembroRequest;
+import springdatajpa.model.dto.MembroRequest;
 import springdatajpa.service.MembroService;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/membros")

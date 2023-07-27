@@ -1,4 +1,6 @@
-package springdatajpa.model;
+package springdatajpa.model.entity;
+
+import springdatajpa.model.enums.ProgramacaoTipo;
 
 import javax.persistence.*;
 import java.util.Date;

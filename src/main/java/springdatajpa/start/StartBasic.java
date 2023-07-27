@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import springdatajpa.model.*;
+import springdatajpa.model.entity.*;
+import springdatajpa.model.enums.MembroTipo;
+import springdatajpa.model.enums.Sexo;
 import springdatajpa.repository.CongregacaoRepository;
 import springdatajpa.repository.SedeRepository;
 import springdatajpa.repository.MembroRepository;
@@ -28,10 +30,10 @@ public class StartBasic implements CommandLineRunner {
         //incluirMembro();
     }
 
-    private Congregacao incluirCongregacao(){
-        Congregacao congregacao  = congregacaoCrud.findById(3).orElse(null);
+    private CongregacaoEntity incluirCongregacao(){
+        CongregacaoEntity congregacao  = congregacaoCrud.findById(3).orElse(null);
         if(congregacao==null) {
-            congregacao = new Congregacao();
+            congregacao = new CongregacaoEntity();
             congregacao.setNome("Igreja Batista Vinho Novo");
             congregacaoCrud.save(congregacao);
             System.out.println("congregacao adicionada com sucesso");

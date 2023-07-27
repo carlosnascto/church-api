@@ -1,15 +1,9 @@
-package springdatajpa.controller;
+package springdatajpa.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.dto.ProgramacaoRequest;
-import springdatajpa.model.Congregacao;
-import springdatajpa.model.Programacao;
-import springdatajpa.repository.CongregacaoRepository;
-import springdatajpa.repository.ProgramacaoRepository;
+import springdatajpa.model.dto.ProgramacaoRequest;
 import springdatajpa.service.ProgramacaoService;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/programacoes")

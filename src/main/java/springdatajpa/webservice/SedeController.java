@@ -1,14 +1,8 @@
-package springdatajpa.controller;
+package springdatajpa.webservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.dto.ProgramacaoRequest;
-import springdatajpa.dto.SedeRequest;
-import springdatajpa.model.Sede;
-import springdatajpa.repository.SedeRepository;
-import springdatajpa.service.ProgramacaoService;
+import springdatajpa.model.dto.SedeRequest;
 import springdatajpa.service.SedeService;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/sedes")

@@ -3,11 +3,8 @@ package springdatajpa.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import springdatajpa.dto.ProgramacaoRequest;
-import springdatajpa.dto.SedeRequest;
-import springdatajpa.model.Programacao;
-import springdatajpa.model.Sede;
-import springdatajpa.repository.ProgramacaoRepository;
+import springdatajpa.model.dto.SedeRequest;
+import springdatajpa.model.entity.Sede;
 import springdatajpa.repository.SedeRepository;
 @Service
 public class SedeService {
