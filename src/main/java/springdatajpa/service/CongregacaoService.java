@@ -15,8 +15,20 @@ public class CongregacaoService {
     private CongregacaoRepository repository;
 
     public void incluir(CongregacaoRequest request) {
-        CongregacaoEntity entity = new CongregacaoEntity();
+       gravar(null, request);
+    }
+    public void alterar(Integer id, CongregacaoRequest request){
+        gravar(id, request);
+    }
+    private void gravar(Integer id, CongregacaoRequest request){
+        CongregacaoEntity entity = null;
+        if(id==null)
+            entity = new CongregacaoEntity();
+        else
+            entity = repository.findById(id).orElse(null);
+
         BeanUtils.copyProperties(request, entity);
         repository.save(entity);
+
     }
 }

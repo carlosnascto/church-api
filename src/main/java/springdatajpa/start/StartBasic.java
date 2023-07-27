@@ -41,10 +41,10 @@ public class StartBasic implements CommandLineRunner {
         return congregacao;
     }
 
-    private Sede incluirSede(){
-        Sede sede  = sedeCrud.findById(1).orElse(null);
+    private SedeEntity incluirSede(){
+        SedeEntity sede  = sedeCrud.findById(1).orElse(null);
         if(sede==null) {
-            sede = new Sede();
+            sede = new SedeEntity();
             sede.setNome("Igreja Apostólica Gerando Vidas - Santa Inês");
             sede.setCnpj("23457872878395");
             sede.setEmail("iagv-sti");
@@ -57,10 +57,10 @@ public class StartBasic implements CommandLineRunner {
         return sede;
     }
 
-    private Membro incluirMembro(){
-                Membro membro  = membroCrud.findById(2).orElse(null);
+    private MembroEntity incluirMembro(){
+                MembroEntity membro  = membroCrud.findById(2).orElse(null);
                 if(membro==null) {
-                    membro = new Membro();
+                    membro = new MembroEntity();
                     membro.setNome("Carlos Henrique Oliveira");
                     membro.setTelefone(98983479785L);
                     membro.setSexo(Sexo.MASCULINO);

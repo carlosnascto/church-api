@@ -2,7 +2,9 @@ package springdatajpa.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springdatajpa.model.dto.CongregacaoRequest;
 import springdatajpa.model.dto.ProgramacaoRequest;
+import springdatajpa.service.CongregacaoService;
 import springdatajpa.service.ProgramacaoService;
 
 @RestController
@@ -13,6 +15,10 @@ public class ProgramacaoController {
     @PostMapping
     public void salvar(@RequestBody ProgramacaoRequest request){
         service.incluir(request);
+    }
+    @PutMapping("/{id}")
+    public void alterar(@PathVariable("id") Integer id, @RequestBody ProgramacaoRequest request){
+        service.alterar(id, request);
     }
 
 }

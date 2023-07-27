@@ -15,5 +15,9 @@ public class CongregacaoController {
     public void salvar(@RequestBody CongregacaoRequest request){
         service.incluir(request);
     }
+    @PutMapping("/{id}")
+    public void alterar(@PathVariable("id") Integer id, @RequestBody CongregacaoRequest request){
+        service.alterar(id, request);
+    }
 
 }
