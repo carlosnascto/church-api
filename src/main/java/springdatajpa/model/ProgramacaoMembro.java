@@ -22,4 +22,12 @@ public class ProgramacaoMembro {
     public void setMembro(Integer membro) {
         this.membro = membro;
     }
+
+    public Double getValorPago() {
+        return valorPago;
+    }
+
+    public void setValorPago(Double valorPago) {
+        this.valorPago = valorPago;
+    }
 }

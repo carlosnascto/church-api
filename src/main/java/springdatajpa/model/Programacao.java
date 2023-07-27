@@ -16,11 +16,37 @@ public class Programacao {
     private Endereco endereco;
     @Enumerated(EnumType.STRING)
     private ProgramacaoTipo tipo;
+    @Column(name="vl_participado")
     private Double valorParticipacao;
+    @Column(name="vl_arrecadado")
     private Double valorArrecadado;
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "programacao_id")
     private List<ProgramacaoMembro> membros;
+
+    public ProgramacaoTipo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(ProgramacaoTipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public Double getValorParticipacao() {
+        return valorParticipacao;
+    }
+
+    public void setValorParticipacao(Double valorParticipacao) {
+        this.valorParticipacao = valorParticipacao;
+    }
+
+    public Double getValorArrecadado() {
+        return valorArrecadado;
+    }
+
+    public void setValorArrecadado(Double valorArrecadado) {
+        this.valorArrecadado = valorArrecadado;
+    }
 
     public String getNome() {
         return nome;
@@ -44,5 +70,13 @@ public class Programacao {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public List<ProgramacaoMembro> getMembros() {
+        return membros;
+    }
+
+    public void setMembros(List<ProgramacaoMembro> membros) {
+        this.membros = membros;
     }
 }

@@ -2,34 +2,23 @@ package springdatajpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springdatajpa.dto.ProgramacaoRequest;
 import springdatajpa.model.Congregacao;
 import springdatajpa.model.Programacao;
 import springdatajpa.repository.CongregacaoRepository;
 import springdatajpa.repository.ProgramacaoRepository;
+import springdatajpa.service.ProgramacaoService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/programacao")
+@RequestMapping("/programacoes")
 public class ProgramacaoController {
     @Autowired
-    private ProgramacaoRepository repository;
+    private ProgramacaoService service;
     @PostMapping
-    public void salvar(@RequestBody Programacao programacao){
-        repository.save(programacao);
+    public void salvar(@RequestBody ProgramacaoRequest request){
+        service.incluir(request);
     }
 
-    @PutMapping
-    public void alterar(@RequestBody Programacao programacao){
-        repository.save(programacao);
-    }
-
-    @GetMapping(path = "/{id}")
-    public Programacao buscar(@PathVariable("id") Integer id){
-        return repository.findById(id).get();
-    }
-    @GetMapping
-    public List<Programacao> listar(){
-        return repository.findAll();
-    }
 }
