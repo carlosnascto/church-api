@@ -2,9 +2,7 @@ package springdatajpa.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.model.dto.CongregacaoRequest;
-import springdatajpa.model.dto.ProgramacaoRequest;
-import springdatajpa.service.CongregacaoService;
+import springdatajpa.model.dto.request.ProgramacaoRequest;
 import springdatajpa.service.ProgramacaoService;
 
 @RestController

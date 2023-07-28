@@ -1,4 +1,4 @@
-package springdatajpa.model.dto;
+package springdatajpa.model.dto.request;
 
 import lombok.Data;
 import springdatajpa.model.entity.Endereco;

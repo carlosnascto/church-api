@@ -3,11 +3,8 @@ package springdatajpa.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import springdatajpa.model.dto.CongregacaoRequest;
-import springdatajpa.model.dto.MembroRequest;
-import springdatajpa.model.entity.CongregacaoEntity;
+import springdatajpa.model.dto.request.MembroRequest;
 import springdatajpa.model.entity.MembroEntity;
-import springdatajpa.repository.CongregacaoRepository;
 import springdatajpa.repository.MembroRepository;
 
 @Service

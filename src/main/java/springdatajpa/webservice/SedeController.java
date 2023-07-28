@@ -1,8 +1,7 @@
 package springdatajpa.webservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import springdatajpa.model.dto.CongregacaoRequest;
-import springdatajpa.model.dto.SedeRequest;
+import springdatajpa.model.dto.request.SedeRequest;
 import springdatajpa.service.SedeService;
 
 @RestController
