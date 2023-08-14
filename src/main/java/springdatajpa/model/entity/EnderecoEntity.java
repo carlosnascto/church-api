@@ -1,10 +1,9 @@
 package springdatajpa.model.entity;
-import javax.persistence.*;
 import javax.persistence.Embeddable;
 
 
 @Embeddable
-public class Endereco {
+public class EnderecoEntity {
 
     private String logradouro;
     private String bairro;

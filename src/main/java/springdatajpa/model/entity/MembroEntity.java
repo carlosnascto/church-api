@@ -22,8 +22,8 @@ public class MembroEntity {
     private MembroTipo tipo;
     private Sexo sexo;
     @Embedded
-    private Endereco endereco;
-    @Column(name="id_sede")
-    private Integer sede;
+    private EnderecoEntity endereco;
+    @Column(name="id_congregacao")
+    private Integer congregacao;
 
 }

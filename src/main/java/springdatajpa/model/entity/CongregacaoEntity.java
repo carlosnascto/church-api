@@ -4,15 +4,27 @@ import lombok.Data;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name = "tab_congregacoes")
+@Table(name = "tab_congregacao")
 @Data
 public class CongregacaoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
     private Integer id;
-
+    private Boolean sede;
     private String nome;
+    private String cnpj;
+    private String pastorLider;
+    private Date dataInicio;
+    private String email;
+    private Long telefone;
+    @Embedded
+    private EnderecoEntity endereco;
+    @Column(name="id_ministerio")
+    private Integer ministerio;
+    @Column(name="id_departamento")
+    private Integer departamento;
 }

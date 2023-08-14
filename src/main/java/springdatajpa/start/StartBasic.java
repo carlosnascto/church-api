@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 import springdatajpa.model.entity.*;
 import springdatajpa.model.enums.MembroTipo;
 import springdatajpa.model.enums.Sexo;
+import springdatajpa.repository.MinisterioRepository;
 import springdatajpa.repository.CongregacaoRepository;
-import springdatajpa.repository.SedeRepository;
 import springdatajpa.repository.MembroRepository;
 
 import java.sql.Date;
@@ -16,9 +16,9 @@ import java.sql.Date;
 @Component // componente gerado pelo spring
 public class StartBasic implements CommandLineRunner {
     @Autowired // indica a injeção automática pelo spring
-    private CongregacaoRepository congregacaoCrud;
+    private MinisterioRepository congregacaoCrud;
     @Autowired
-    private SedeRepository sedeCrud;
+    private CongregacaoRepository sedeCrud;
     @Autowired
     private MembroRepository membroCrud;
 
@@ -30,10 +30,10 @@ public class StartBasic implements CommandLineRunner {
         //incluirMembro();
     }
 
-    private CongregacaoEntity incluirCongregacao(){
-        CongregacaoEntity congregacao  = congregacaoCrud.findById(3).orElse(null);
+    private MinisterioEntity incluirCongregacao(){
+        MinisterioEntity congregacao  = congregacaoCrud.findById(3).orElse(null);
         if(congregacao==null) {
-            congregacao = new CongregacaoEntity();
+            congregacao = new MinisterioEntity();
             congregacao.setNome("Igreja Batista Vinho Novo");
             congregacaoCrud.save(congregacao);
             System.out.println("congregacao adicionada com sucesso");
@@ -41,10 +41,10 @@ public class StartBasic implements CommandLineRunner {
         return congregacao;
     }
 
-    private SedeEntity incluirSede(){
-        SedeEntity sede  = sedeCrud.findById(1).orElse(null);
+    private CongregacaoEntity incluirSede(){
+        CongregacaoEntity sede  = sedeCrud.findById(1).orElse(null);
         if(sede==null) {
-            sede = new SedeEntity();
+            sede = new CongregacaoEntity();
             sede.setNome("Igreja Apostólica Gerando Vidas - Santa Inês");
             sede.setCnpj("23457872878395");
             sede.setEmail("iagv-sti");

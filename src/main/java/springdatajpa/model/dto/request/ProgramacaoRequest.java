@@ -1,7 +1,7 @@
 package springdatajpa.model.dto.request;
 
 import lombok.Data;
-import springdatajpa.model.entity.Endereco;
+import springdatajpa.model.entity.EnderecoEntity;
 import springdatajpa.model.enums.ProgramacaoTipo;
 
 import java.util.Date;
@@ -12,7 +12,7 @@ public class ProgramacaoRequest {
     private String nome;
     private Date data;
 
-    private Endereco endereco;
+    private EnderecoEntity endereco;
 
     private ProgramacaoTipo tipo;
 

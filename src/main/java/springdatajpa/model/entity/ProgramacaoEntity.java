@@ -20,7 +20,7 @@ public class ProgramacaoEntity {
     private String nome;
     private Date data;
     @Embedded
-    private Endereco endereco;
+    private EnderecoEntity endereco;
     @Enumerated(EnumType.STRING)
     private ProgramacaoTipo tipo;
     @Column(name="vl_participado")

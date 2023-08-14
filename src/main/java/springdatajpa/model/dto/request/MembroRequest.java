@@ -1,7 +1,7 @@
 package springdatajpa.model.dto.request;
 
 import lombok.Data;
-import springdatajpa.model.entity.Endereco;
+import springdatajpa.model.entity.EnderecoEntity;
 import springdatajpa.model.enums.MembroTipo;
 import springdatajpa.model.enums.Sexo;
 
@@ -11,6 +11,6 @@ public class MembroRequest {
     private Long telefone;
     private MembroTipo tipo;
     private Sexo sexo;
-    private Endereco endereco;
+    private EnderecoEntity endereco;
     private Integer sede;
 }
