@@ -13,6 +13,5 @@ public class MinisterioEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
     private Integer id;
-
     private String nome;
 }

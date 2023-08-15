@@ -3,7 +3,7 @@ package springdatajpa.webservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import springdatajpa.model.dto.request.MinisterioRequest;
-import springdatajpa.model.dto.response.CongregacaoResponse;
+import springdatajpa.model.dto.response.MinisterioResponse;
 import springdatajpa.service.MinisterioService;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class MinisterioController {
         service.alterar(id, request);
     }
     @GetMapping
-    public List<CongregacaoResponse> listar(){
+    public List<MinisterioResponse> listar(){
         return service.listar();
     }
 }
