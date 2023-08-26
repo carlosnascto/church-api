@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tab_congregacao")
@@ -25,6 +26,5 @@ public class CongregacaoEntity {
     private EnderecoEntity endereco;
     @Column(name="id_ministerio")
     private Integer ministerio;
-    @Column(name="id_departamento")
-    private Integer departamento;
+    private List<DepartamentoEntity> departamentos;
 }
