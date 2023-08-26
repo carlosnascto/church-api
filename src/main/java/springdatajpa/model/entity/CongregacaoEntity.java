@@ -26,5 +26,6 @@ public class CongregacaoEntity {
     private EnderecoEntity endereco;
     @Column(name="id_ministerio")
     private Integer ministerio;
+    @OneToMany(cascade = CascadeType.PERSIST)
     private List<DepartamentoEntity> departamentos;
 }

@@ -8,7 +8,7 @@ import springdatajpa.model.enums.Sexo;
 import javax.persistence.*;
 
 @Entity // indica que esta classe é uma entidade que será mapeada como uma tabela de um banco.
-@Table(name = "tab_membros") // indica a tabela que os dados serão persistidas.
+@Table(name = "tab_membro") // indica a tabela que os dados serão persistidas.
 
 @Data
 public class MembroEntity {

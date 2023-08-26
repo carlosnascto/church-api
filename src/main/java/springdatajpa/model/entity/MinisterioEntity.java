@@ -14,6 +14,7 @@ public class MinisterioEntity {
     @Setter(AccessLevel.NONE)
     private Integer id;
     private String nome;
-    @Column(name="id_organizacao")
-    private Integer organizacao;
+    @ManyToOne
+    @JoinColumn(name = "organizacao_id")
+    private OrganizacaoEntity organizacao;
 }
