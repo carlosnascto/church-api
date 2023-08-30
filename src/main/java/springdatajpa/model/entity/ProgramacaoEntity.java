@@ -27,8 +27,7 @@ public class ProgramacaoEntity {
     private Double valorParticipacao;
     @Column(name="vl_arrecadado")
     private Double valorArrecadado;
-    @OneToMany(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "programacao_id")
-    private List<ProgramacaoMembro> membros;
+    //@Column(name = "programacao_id")
+    //private List<ProgramacaoMembro> membros;
 
 }

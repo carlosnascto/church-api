@@ -15,5 +15,5 @@ public class MinisterioEntity {
     private Integer id;
     private String nome;
     @Column(name = "organizacao_id")
-    private OrganizacaoEntity organizacao;
+    private Integer organizacao;
 }
