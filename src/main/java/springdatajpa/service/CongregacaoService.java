@@ -45,4 +45,9 @@ public class CongregacaoService {
         }
         return lista;
     }
+    public void deletar(Integer id){
+        if (repository.existsById(id)){
+            repository.deleteById(id);
+        }
+    }
 }

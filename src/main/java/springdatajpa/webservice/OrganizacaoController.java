@@ -29,4 +29,8 @@ public class OrganizacaoController {
     public List<OrganizacaoResponse> listar(){
         return service.listar();
     }
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable("id") Integer id){
+        service.deletar(id);
+    }
 }

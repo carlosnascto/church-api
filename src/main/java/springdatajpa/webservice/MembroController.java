@@ -26,4 +26,8 @@ public class MembroController {
     public List<MembroResponse> listar(){
         return service.listar();
     }
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable("id") Integer id){
+        service.deletar(id);
+    }
 }

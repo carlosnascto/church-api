@@ -26,4 +26,8 @@ public class ProgramacaoController {
     public List<ProgramacaoResponse> listar(){
         return service.listar();
     }
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable("id") Integer id){
+        service.deletar(id);
+    }
 }
