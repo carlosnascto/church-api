@@ -12,23 +12,28 @@ import java.util.List;
 @RequestMapping("/ministerios")
 
 public class MinisterioController {
+
     @Autowired
     private MinisterioService service;
 
     @PostMapping
-    public void salvar(@RequestBody MinisterioRequest request){
+    public void salvar(@RequestBody MinisterioRequest request) {
         service.incluir(request);
     }
-    @PutMapping("/{id}")
-    public void alterar(@PathVariable("id") Integer id, @RequestBody MinisterioRequest request){
+
+    @PatchMapping("/{id}")
+    public void alterar(@PathVariable("id") Integer id, @RequestBody MinisterioRequest request) {
         service.alterar(id, request);
     }
+
     @GetMapping
-    public List<MinisterioResponse> listar(){
+    public List<MinisterioResponse> listar() {
         return service.listar();
     }
+
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable("id") Integer id){
+    public void deletar(@PathVariable("id") Integer id) {
         service.deletar(id);
     }
+
 }
