@@ -18,7 +18,7 @@ public class ProgramacaoController {
     public void salvar(@RequestBody ProgramacaoRequest request){
         service.incluir(request);
     }
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public void alterar(@PathVariable("id") Integer id, @RequestBody ProgramacaoRequest request){
         service.alterar(id, request);
     }

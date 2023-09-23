@@ -21,7 +21,7 @@ public class DepartamentoController {
         service.incluir(request);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public void alterar(@PathVariable("id") Integer id, @RequestBody DepartamentoRequest request){
         service.alterar(id, request);
     }

@@ -18,7 +18,7 @@ public class MembroController {
     public void salvar(@RequestBody MembroRequest request){
         service.incluir(request);
     }
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public void alterar(@PathVariable("id") Integer id, @RequestBody MembroRequest request){
         service.alterar(id, request);
     }

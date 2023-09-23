@@ -19,7 +19,7 @@ public class CongregacaoController {
         service.incluir(request);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public void alterar(@PathVariable("id") Integer id, @RequestBody CongregacaoRequest request){
         service.alterar(id, request);
     }

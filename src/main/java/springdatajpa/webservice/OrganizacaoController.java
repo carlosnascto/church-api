@@ -21,7 +21,7 @@ public class OrganizacaoController {
         service.incluir(request);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public void alterar(@PathVariable("id") Integer id, @RequestBody OrganizacaoRequest request){
         service.alterar(id, request);
     }
